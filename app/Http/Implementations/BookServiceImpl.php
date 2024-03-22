@@ -49,6 +49,7 @@ Class BookServiceImpl implements BookService
     public function updateBook($id, Request $request){
         $result = Book::where('id', $id)->update([
             'title' => $request->title,
+            'author_id' => $request->author_id
         ]);
 
         if(!$result){

@@ -7,10 +7,10 @@
                 <input type="text" v-model="title" class="form-control" id="name">
             </div>
             <div class="mb-3">
-                <select class="form-select" v-model="author_id" aria-label="Disabled select example">
-                    <option selected>Choose Author</option>
+                <label for="name" class="form-label">Author</label>
+                <select class="form-select" v-model="author_id">
                     <option v-for="author in authors" :value="author.id">{{ author.name }}</option>
-            </select>
+                </select>
             </div>
 
             <div class="d-flex justify-content-center">
